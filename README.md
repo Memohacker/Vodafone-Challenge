@@ -1,18 +1,106 @@
-# Vodafone-Challenge
-Data Science , Analysis and Visualization  analyze resource allocation for Vodafone’s Project Management Office - Customer Demand and Capacity Planning Allocation Team. Includes data preprocessing, capacity planning, and visualization using Python, SSIS, and Tableau.
+# 📊 Vodafone-Challenge
 
-## Introduction
-This project analyzes the resource allocation for Vodafone’s Project Management Office - Customer Demand and Capacity Planning Allocation Team. The goal is to provide a reporting solution to analyze resources per project and anticipated free capacity for each resource while running demand/supply gap analyses.
+**Data Science | Analysis | Visualization**
+Analyze **resource allocation** for Vodafone’s **Project Management Office – Customer Demand & Capacity Planning Allocation Team** using **Python, SSIS, and Tableau**.
 
-## Explaining Raw Data
-The raw data includes employee codes, month data, and resource allocation details. Python was used to clean the data by extracting employee codes, handling null values, and applying table functions to calculate measures like total allocated hours, remaining capacity, and auto rates.
+---
 
-## Preprocessing (DWH)
-Data was preprocessed using SSIS for integration and transformation. A Star Schema model was applied, and fact tables and dimension tables were created for employees, dates, and regions. SSAS cubes were used for multidimensional analysis.
+## 🚀 **Introduction**
 
-## Data Visualization (Tableau & Power BI)
-Tableau was utilized to visualize the results:
-- **Utilization Rate by Region (Map View):** Heatmaps to display workload distribution.
-- **Department Utilization Rates:** Insights into which departments are over or under-utilized.
-- **Top 10 Employees' Utilization:** Highlights overburdened employees.
-- **Allocated vs. Contracted Hours:** Displays fluctuations in workload distribution over the year.
+This project focuses on analyzing **resource allocation** within Vodafone’s PMO to:
+✅ Measure resource utilization per project
+✅ Identify free capacity for each resource
+✅ Perform **demand vs. supply gap analysis**
+✅ Provide actionable insights through **interactive dashboards**
+
+---
+
+## 🗂 **Raw Data Overview**
+
+The dataset contains:
+
+* 👤 **Employee Codes** – Unique identifiers for resources
+* 📅 **Month-wise Data** – Time-series data for allocation trends
+* ⏳ **Resource Allocation Details** – Total hours, contracted hours, and remaining capacity
+
+**Preprocessing (Python):**
+
+* 🧹 Data cleaning (null handling, formatting, code extraction)
+* 📊 Aggregating measures:
+
+  * **Total Allocated Hours**
+  * **Remaining Capacity**
+  * **Auto-Calculated Utilization Rates**
+
+---
+
+## 🛠 **ETL & Data Warehouse (DWH)**
+
+Data was processed using **SSIS** to create a **Star Schema** for easy analysis.
+
+📐 **Star Schema Includes:**
+
+* **Fact Table:** Resource Allocation
+* **Dimension Tables:**
+
+  * Employee
+  * Date
+  * Region / Department
+
+📦 **SSAS Cubes:** Used for **multidimensional analysis** (OLAP) enabling fast slicing, dicing, and drill-downs.
+
+---
+
+## 📊 **Data Visualization (Tableau & Power BI)**
+
+Built **interactive dashboards** for decision-makers:
+
+🔹 **Utilization Rate by Region (Map View)**
+
+> Heatmaps showing which regions are overloaded or under-utilized.
+
+🔹 **Department Utilization Rates**
+
+> Helps managers quickly identify departments with spare capacity or excessive workload.
+
+🔹 **Top 10 Employees by Utilization**
+
+> Pinpoints the most overburdened employees for workload balancing.
+
+🔹 **Allocated vs. Contracted Hours Trend**
+
+> Monthly trend chart to monitor **demand fluctuations** throughout the year.
+
+---
+
+## 🖼 **Sample Dashboard (Tableau)**
+
+[Tableau work.pdf](https://github.com/user-attachments/files/22269088/Tableau.work.pdf)
+
+---
+
+## 🛠 **Tech Stack**
+
+| Tool                       | Purpose                                  |
+| -------------------------- | ---------------------------------------- |
+| **Python (Pandas, Numpy)** | Data cleaning & preprocessing            |
+| **SSIS**                   | ETL & Data Integration                   |
+| **SSAS**                   | OLAP Cubes for multidimensional analysis |
+| **Tableau / Power BI**     | Data Visualization & Dashboarding        |
+
+---
+
+## 📈 **Key Outcomes**
+
+✅ Improved visibility into **resource utilization**
+✅ Early detection of **demand-supply gaps**
+✅ Optimized **capacity planning** for Vodafone PMO
+✅ Faster decision-making with **self-service BI dashboards**
+
+---
+
+## 📌 **Next Steps**
+
+* 🔄 Automate data refresh for real-time dashboards
+* 🤖 Add ML-based **workload prediction**
+* 📲 Deploy interactive dashboards for wider access
